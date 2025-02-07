@@ -9,15 +9,20 @@ dotenv.config();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "http://localhost:1234",
-    credentials: true,
-    methods: ["GET", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    preflightContinue: false,
-  })
-);
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({
+    path: ".env",
+  });
+}
+const corsConfig = cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true,
+  methods: ["GET", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
+  preflightContinue: false,
+});
 
+app.options("", cors(corsConfig));
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use(cookieParser());
 
