@@ -11,11 +11,11 @@ dotenv.config();
 const app = express();
 const __dirname = path.resolve();
 
-// if (process.env.NODE_ENV !== "production") {
-//   dotenv.config({
-//     path: ".env",
-//   });
-// }
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({
+    path: ".env",
+  });
+}
 
 app.use(
   cors({
