@@ -24,7 +24,9 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:7000/sign-up",
+        import.meta.env.MODE === "development"
+          ? "http://localhost:7000/sign-up"
+          : "/",
         {
           username,
           emailId,

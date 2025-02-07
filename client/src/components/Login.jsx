@@ -23,7 +23,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:7000/sign-in",
+        import.meta.env.MODE === "development"
+          ? "http://localhost:7000/sign-in"
+          : "/",
         {
           emailId,
           password,
