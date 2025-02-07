@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { MinusCircle } from "lucide-react";
-import { ImageCdn } from "../data/ImageCdn";
+import { ImageCdn } from "../Data/ImageCdn";
 
 const CartContent = ({ itemInfo }) => {
   useEffect(() => {
