@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { MinusCircle } from "lucide-react";
-import { ImageCdn } from "../Data/ImageCdn";
+// import { ImageCdn } from "../Data/ImageCdn";
 
 const CartContent = ({ itemInfo }) => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const CartContent = ({ itemInfo }) => {
         {itemInfo?.imageId && (
           <div className="relative h-48 overflow-hidden">
             <img
-              src={`${ImageCdn}${itemInfo?.imageId}`}
+              src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${itemInfo?.imageId}`}
               alt={itemInfo?.name}
               className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
             />

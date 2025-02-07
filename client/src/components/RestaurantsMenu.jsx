@@ -3,7 +3,7 @@ import Loader from "./Loader";
 import useMenu from "../utils/useMenu";
 import { addItem } from "../utils/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { ImageCdn } from "../Data/ImageCdn";
+// import { ImageCdn } from "../Data/ImageCdn";
 import { Star, Clock, PlusCircle } from "lucide-react";
 import { useEffect } from "react";
 
@@ -42,7 +42,7 @@ const RestaurantMenu = () => {
           <div className="relative h-64 md:h-80">
             <img
               className="w-full h-full object-cover"
-              src={`${ImageCdn}${info?.cloudinaryImageId}`}
+              src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${info?.cloudinaryImageId}`}
               alt={info?.name}
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6">
@@ -100,7 +100,7 @@ const RestaurantMenu = () => {
                       </div>
                       {itemInfo?.imageId && (
                         <img
-                          src={`${ImageCdn}${itemInfo.imageId}`}
+                          src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${itemInfo.imageId}`}
                           alt={itemInfo.name}
                           className="w-20 h-20 object-cover rounded-md"
                         />
