@@ -16,17 +16,21 @@ const __dirname = path.resolve();
 //     path: ".env",
 //   });
 // }
-const corsConfig = cors({
-  origin: process.env.CLIENT_URL,
-  credentials: true,
-  methods: ["GET", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-  preflightContinue: false,
-});
 
-app.options("", cors(corsConfig));
-app.use(cors(corsConfig));
+app.use(
+  cors({
+    origin: "http://localhost:1234/",
+    credentials: true,
+    methods: ["GET", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
+    preflightContinue: false,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
+app.use((req, res, next) => {
+  console.log(`Request received: ${req.method} ${req.url}`);
+  next();
+});
 
 app.use("/", authRouter);
 
