@@ -126,7 +126,7 @@ const Cart = () => {
             <ShoppingCart className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <p className="text-xl text-gray-600">Your cart is empty</p>
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/home")}
               className="mt-4 px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors duration-300"
             >
               Continue Shopping

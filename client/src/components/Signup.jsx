@@ -32,7 +32,7 @@ const Signup = () => {
         },
         { withCredentials: true }
       );
-      console.log("Signup successful", response.data);
+
       dispatch(addUser(response?.data?.data));
       navigate("/home");
     } catch (err) {

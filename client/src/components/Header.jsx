@@ -28,7 +28,7 @@ const HeaderComponent = () => {
         {},
         { withCredentials: true }
       );
-      console.log("Logout successful", response.data);
+
       dispatch(removeUser());
       navigate("/sign-in");
     } catch (error) {

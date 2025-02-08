@@ -30,8 +30,7 @@ const Login = () => {
         },
         { withCredentials: true }
       );
-      console.log("Login successful", response.data);
-      console.log(response?.data?.data);
+
       dispatch(addUser(response?.data?.data));
       navigate("/home");
     } catch (err) {
