@@ -6,9 +6,6 @@ import { useSelector } from "react-redux";
 const About = () => {
   const user = useSelector((store) => store.user);
   const navigate = useNavigate();
-  useEffect(() => {
-    // Best place to call an API
-  }, []);
 
   useEffect(() => {
     if (!user) {

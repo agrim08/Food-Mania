@@ -91,13 +91,6 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
         errorElement: <Error />,
-        children: [
-          {
-            path: "profile",
-            element: <Profile />,
-            errorElement: <Error />,
-          },
-        ],
       },
       {
         path: "/sign-in",
