@@ -38,10 +38,10 @@ The project is built with a modern, full-stack JavaScript architecture. The anal
 -   **Styling**: (e.g., CSS Modules, Styled-Components, or Tailwind CSS)
 -   **Form Handling**: Utilizes `form-data` for complex forms, likely for recipe image uploads.
 
-### Server-Side (Suggested)
+### Server-Side 
 -   **Runtime**: Node.js
 -   **Framework**: Express.js
--   **Database**: PostgreSQL / MongoDB
+-   **Database**: MongoDB
 -   **Authentication**: (e.g., JWT, Passport.js)
 
 ### Common
@@ -116,7 +116,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     Open a new terminal window.
     ```sh
     cd client
-    npm start
+    npm run start
     ```
     The client development server will open at `http://localhost:1234`.
 
