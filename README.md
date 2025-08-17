@@ -9,7 +9,6 @@ _Your one-stop destination for discovering recipes with a vibrant community of f
 
 FoodMania is a modern, responsive web application built for culinary enthusiasts. Whether you're looking for your next meal's inspiration, wanting to share your own signature dishes, or simply organizing your favorite recipes, FoodMania offers an intuitive and feature-rich platform to satisfy all your foodie needs.
 
-[**Live Demo »**](https://your-live-demo-link.com)
 
 ## ✨ Features
 
